@@ -3,9 +3,21 @@
 import pynecone as pc
 
 
-class RecommendationsState(pc.State):
-    pass
-
-
 def recommendations() -> pc.Component:
-    return pc.center(pc.text("Recommendations Page"))
+    return pc.center(
+        pc.vstack(
+            pc.text("What is Saving?"),
+            pc.text("Watch the video below to learn about saving"),
+            pc.link(
+                pc.image(
+                    src="/savings_goals_for_kids.png", width="50em", height="auto"
+                ),
+                href="https://www.youtube.com/watch?v=v-mlEQ7KW5Q",
+            ),
+            pc.link(
+                pc.button("Next", color_scheme="green"),
+                href="/progress-check",
+                button=True,
+            ),
+        )
+    )

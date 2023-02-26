@@ -3,10 +3,6 @@
 import pynecone as pc
 
 
-class TopicSelectionState(pc.State):
-    pass
-
-
 def topic_selection() -> pc.Component:
     return pc.center(
         pc.vstack(

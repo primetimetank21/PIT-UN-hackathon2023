@@ -3,10 +3,6 @@
 import pynecone as pc
 
 
-class RecommendationsState(pc.State):
-    pass
-
-
 def recommendation_higher() -> pc.Component:
     return pc.center(
         pc.vstack(
@@ -23,6 +19,3 @@ def recommendation_higher() -> pc.Component:
             ),
         )
     )
-
-
-# https://miro.com/app/board/uXjVPjC5Enw=/?moveToWidget=3458764547251009381&cot=14

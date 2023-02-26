@@ -3,9 +3,9 @@
 import pynecone as pc
 
 
-def questionnaire() -> pc.Component:
+def progress_check() -> pc.Component:
     questions: dict = {
-        "Q1": ["How much of your money do you save?", "None", "Some", "Almost all"],
+        "Q1": ["What is saving?", "A", "B", "C", "D"],
         "Q2": ["Do you think saving money is important?", "No", "Maybe", "Yes"],
     }
     q1 = questions["Q1"][0]
@@ -46,7 +46,7 @@ def questionnaire() -> pc.Component:
             ),
             pc.link(
                 pc.button("Next", color_scheme="green"),
-                href="/recommendation-higher",
+                href="/saving-simulation",
                 button=True,
             ),
         )
