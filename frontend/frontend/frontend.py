@@ -2,8 +2,12 @@
 import pynecone as pc
 from .routes.topic_selection import topic_selection
 from .routes.initial_question import initial_question
+from .routes.questionnaire import questionnaire
+from .routes.recommendations import recommendations
+from .routes.recommendation_higher import recommendation_higher
 
 # Component docs: https://pynecone.io/docs/library
+# https://miro.com/app/board/uXjVPjC5Enw=/?userEmail=earl.tankard@bison.howard.edu&shareBoard=marcus.syrr@gmail.com&track=true&invite_entry_point=board&flow_feature=access_board&flow_type=request
 
 
 class IndexState(pc.State):
@@ -35,16 +39,6 @@ def index():
                 placeholder="Password", on_blur=IndexState.set_password, hidden=True
             ),
             # Login button
-            # pc.link(
-            #         "Sign in",
-            #         href="/topic_selection",
-            #         border="0.1em solid",
-            #         padding="0.5em",
-            #         border_radius="0.5em",
-            #         _hover={
-            #             "color": "rgb(107,99,246)",
-            #         },
-            #     ),
             pc.link(
                 pc.button("Sign in", color_scheme="green"),
                 href="/topic-selection",
@@ -58,4 +52,7 @@ app = pc.App(state=IndexState)
 app.add_page(index, route="/")
 app.add_page(topic_selection, route="/topic-selection")
 app.add_page(initial_question, route="/initial-question")
+app.add_page(questionnaire, route="/questionnaire")
+app.add_page(recommendations, route="/recommendations")
+app.add_page(recommendation_higher, route="/recommendation-higher")
 app.compile()
