@@ -6,6 +6,7 @@ import pynecone as pc
 def topic_selection() -> pc.Component:
     return pc.center(
         pc.vstack(
+            pc.text("Topic Selection", font_size="3em"),
             pc.text("Hello Timmy! What would you like to learn about?"),
             # Fin Lit Topics
             pc.button_group(

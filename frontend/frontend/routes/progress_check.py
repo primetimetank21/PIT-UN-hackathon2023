@@ -16,7 +16,8 @@ def progress_check() -> pc.Component:
 
     return pc.center(
         pc.vstack(
-            pc.text(q1),
+            pc.text("Saving Progress Check", font_size="3em"),
+            pc.text(q1, font_size="2em"),
             pc.hstack(
                 *[
                     pc.button(
@@ -30,7 +31,7 @@ def progress_check() -> pc.Component:
                     for option in ans1
                 ]
             ),
-            pc.text(q2),
+            pc.text(q2, font_size="2em"),
             pc.hstack(
                 *[
                     pc.button(

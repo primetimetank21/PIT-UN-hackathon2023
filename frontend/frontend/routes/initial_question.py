@@ -6,7 +6,7 @@ import pynecone as pc
 def initial_question() -> pc.Component:
     return pc.center(
         pc.vstack(
-            pc.text("Do you know what saving is?"),
+            pc.text("Do you know what saving is?", font_size="3em"),
             pc.button_group(
                 pc.link(
                     pc.button(

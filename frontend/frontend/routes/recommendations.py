@@ -6,8 +6,8 @@ import pynecone as pc
 def recommendations() -> pc.Component:
     return pc.center(
         pc.vstack(
-            pc.text("What is Saving?"),
-            pc.text("Watch the video below to learn about saving"),
+            pc.text("What is Saving?", font_size="3em"),
+            pc.text("Watch the video below to learn about saving", font_size="1.5em"),
             pc.link(
                 pc.image(
                     src="/savings_goals_for_kids.png", width="50em", height="auto"
